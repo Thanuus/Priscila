@@ -1,0 +1,232 @@
+#home{
+    display: flex;
+    margin-top: 100px;
+    min-height: calc(100vh);
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 100%;
+    min-width: 100%;
+    gap:40px;
+}
+
+.tittle{
+    line-height: 1.2;
+    font-size: 3rem;
+    color: rgb(57, 35, 22)
+    
+}
+.tittle span{
+    line-height: 1.3;
+}
+
+#cta {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    margin-top: 15%;
+}
+
+#cta .tittle{
+    font-size: 3rem;
+
+    color: rgb(57, 35, 22)
+}
+
+#cta .tittle span{
+    display: block;
+    color: rgb(180, 103, 98)
+}
+
+.description{
+    font-size: 1.2rem;
+}
+
+
+#cta_buttons{
+    display: flex;
+    gap: 24px;
+}
+
+#cta_buttons a{
+    text-decoration: none;
+    color: white;
+}
+
+/*#selos-confianca {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    list-style: none;
+    align-items: center;
+    padding: 0;
+    flex-wrap: wrap;
+}*/
+
+#banner img {
+    display: flex;
+    margin-top: 25%;
+    height: 40%;
+    max-width: 100%;
+    justify-content: center;
+    width: auto;
+    border-radius: 15px;
+}
+
+#sobre_mim {
+    display: flex;
+    min-height: calc(100vh);
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    gap:80px;
+}
+
+#sobre {
+    justify-content: center;
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    margin-top: 5%;
+}
+
+#apresentacao img{
+    display: flex;
+    margin-top: 25%;
+    width: 40%;
+    height: auto;
+    max-height: 450px;
+    max-width: 100%;
+    justify-content: left;
+    width: auto;
+    border-radius: 15px;
+    /*display: flex;
+    height: 40%;
+    max-width: 100%;
+    justify-content: center;
+    width: auto;
+    border-radius: 15px;*/
+}
+
+#servicos_text {
+    justify-content: center;
+    width: 100%;
+    display: flex;
+    flex-direction:column;
+    gap: 28px;
+    margin-top: 5%;
+    text-align: center;
+    margin-bottom: 48px;
+}
+
+/* Alinha os cards lado a lado com espaçamento */
+.container-cards {
+    display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Cria exatamente 2 colunas */
+  gap: 24px ;                             /* Espaço entre elas */
+  width: 100% ;
+  max-width: 1000px ;                     /* Ajuste a largura como quiser */
+  margin: 0 auto ;                        /* Centraliza o bloco na tela */
+  box-sizing: border-box !important;
+   /* display: flex;
+    justify-content: center;
+    gap: 30px; 
+    padding: 40px 20px;
+    max-width: 6000px;
+    min-width: 300px;     
+    align-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;*/
+}
+
+/* Estilo da caixinha (Card) */
+.card {
+  background-color: #ffffff;
+  border-radius: 20px; /* Bordas arredondadas idênticas às da imagem */
+  overflow: hidden; /* Garante que a foto siga o arredondado do card */
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.05); /* Sombra bem suave de fundo */
+  max-width: 450px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Ajusta a foto para cobrir o topo do card uniformemente */
+.card-foto {
+  width: 100%;
+  height: 550px;
+  object-fit: cover;
+}
+
+/* Espaçamento interno do texto e ícones */
+.card-conteudo {
+  padding: 30px;
+}
+
+.card-icone {
+  margin-bottom: 15px;
+  font-size: 20px;
+}
+
+.card h3 {
+  font-size: 22px;
+  color: #B46762;
+  margin-bottom: 15px;
+}
+
+.card p {
+  font-size: 15px;
+  color: #666666;
+  line-height: 1.6;
+}
+
+
+
+@media (max-width: 1240px) {
+    #home {
+        margin-top: 100px;
+        flex-direction: column; /* Empilha: Texto em cima, Imagem embaixo */
+        gap: 20px;              /* Diminui o espaçamento no celular */
+        align-items: flex-start; /* Alinha o conteúdo à esquerda */
+    }
+
+    #cta {
+        width: 100%;            /* Ocupa a largura total da tela no celular */
+    }
+
+    #cta .tittle{
+        font-size: 2rem;
+    }
+
+    #selos-confianca {
+        flex-wrap: wrap;        /* Permite os selos quebrarem linha se faltar espaço */
+        gap: 12px;              /* Aproxima os selos no celular */
+    }
+
+    #sobre_mim {
+        margin-top: 0;
+        flex-direction: column; /* Empilha: Texto em cima, Imagem embaixo */
+        gap: 20px;              /* Diminui o espaçamento no celular */
+        align-items: flex-start; /* Alinha o conteúdo à esquerda */
+    }
+
+    #sobre {
+        width: 100%;
+    }
+
+    .container-cards {
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* Espaço entre um card e outro */
+    padding: 40px 20px;
+    max-width: 350px;
+    min-width: 300px;     
+    text-align: center;
+    flex-direction: column;
+    flex-wrap: wrap; /* Faz os cards quebrarem de linha automaticamente no celular */
+}
+    
+}
