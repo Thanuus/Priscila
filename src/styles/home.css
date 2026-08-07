@@ -93,6 +93,12 @@
     margin-top: 5%;
 }
 
+#apresentacao {
+    flex: 0 0 35%;               /* Define que a imagem ocupará cerca de 35% da largura */
+    display: flex;
+    justify-content: center;
+}
+
 #apresentacao img{
     display: flex;
     margin-top: 25%;
@@ -100,15 +106,10 @@
     height: auto;
     max-height: 450px;
     max-width: 100%;
-    justify-content: left;
+    justify-content: flex;
     width: auto;
     border-radius: 15px;
-    /*display: flex;
-    height: 40%;
-    max-width: 100%;
-    justify-content: center;
-    width: auto;
-    border-radius: 15px;*/
+    
 }
 
 #servicos_text {
