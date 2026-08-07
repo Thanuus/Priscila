@@ -1,49 +1,47 @@
-header {
+header{
     width: 100%;
-    height: 100px;
+    top: 0;
     padding: 28px 8%;
-    background-color: rgb(254, 243, 236);
-}
-
-.logo{
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    object-fit: cover;
-    list-style: none;
+    background-color: rgb(224, 196, 184);
+        position: fixed;
+        border-radius: 0 0 15px 15px;
 }
 
 #navbar{
-    width: 100%;
+    top: 0;
+    left: 0;
+    margin: 10px;
+    margin-left: 2%;
+    width: 95%;
+    z-index: 1000;
     display: flex;
     align-items: center;
     justify-content: space-between;
-
+    box-sizing: border-box;
+  
+    position: fixed;
 }
 
 #nav_logo{
-    font-size: 24px;
+    font-size:24px;
     color: rgb(180,93,98);
 }
 
 #nav_list{
     display: flex;
     list-style: none;
-    gap: 24px;
+    gap:48px;
 }
 
-.nav-item a {
-    padding: 8px 0px;
+.nav-item a{
     text-decoration: none;
-    color: #1d1d1dad;
+    color: rgb(180,93,98);
     font-weight: 600;
 }
-
-.nav-item.active a {
-    color: #1d1d1d;
-    border-bottom: 3px solid rgb(180,93,98);
+.nav-item.active a{
+    color: rgb(180,93,98);
+    border-bottom: 3px solid rgba(180, 93, 97, 0.808);
 }
-/* 12:06 https://www.youtube.com/watch?v=8V3mw1w6h0U */
 
 #mobile_btn{
     display: none;
@@ -53,31 +51,35 @@ header {
     display: none;
 }
 
-@media screen and (max-width: 1170px){
+@media screen and (max-width: 1170px) { 
     #nav_list,
     #navbar .btn-default{
         display: none;
-        
     }
+
+
     #mobile_btn{
         display: block;
         border: none;
         background-color: transparent;
         font-size: 1.5rem;
         cursor: pointer;
+        margin-left: auto;
     }
 
     #mobile_menu.active{
         display: flex;
         flex-direction: column;
         align-items: center;
-    }
 
+    }
+    
     #mobile_nav_list{
         display: flex;
         flex-direction: column;
-        gap: 12px;
+        gap: 15px;
         margin: 12px 0px;
+
     }
     #mobile_nav_list .nav-item {
         list-style: none;
