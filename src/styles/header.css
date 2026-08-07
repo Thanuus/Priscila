@@ -1,10 +1,10 @@
 header{
     width: 100%;
     top: 0;
-    padding: 50px 8%;
+    padding: 55px 8%;
     background-color: rgb(224, 196, 184);
     position: fixed;
-    
+    /*border-radius: 0 0 15px 15px;*/
 
 }
 
@@ -26,6 +26,9 @@ header{
 
 
 #nav_logo a img{
+    /*font-size:24px;
+    color: rgb(180,93,98);
+    text-decoration: none;*/
     margin: auto;
     width: 90px;
     object-fit: contain;
