@@ -78,6 +78,10 @@
     #cta {
         width: 100%;            /* Ocupa a largura total da tela no celular */
     }
+    
+    #cta .tittle{
+        font-size: 2rem;
+    }
 
     #selos-confianca {
         flex-wrap: wrap;        /* Permite os selos quebrarem linha se faltar espaço */
