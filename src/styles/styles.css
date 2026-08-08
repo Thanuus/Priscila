@@ -36,6 +36,8 @@ section{
     box-sizing: border-box;
     background: linear-gradient(to bottom, #FDF4EF, #C4A49B);
     align-items: center;
+    align-content: center;
+    text-align: center;
 }
 
 #duvidas{
