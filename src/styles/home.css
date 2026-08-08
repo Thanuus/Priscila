@@ -64,18 +64,15 @@
     flex-wrap: wrap;
 }*/
 
-#baner{
-    
+#banner {
+    display: flex;
     justify-content: center;
 }
 
 #banner img {
-    display: flex;
-    margin-top: 25%;
-    height: 40%;
-    max-width: 100%;
-    justify-content: center;
-    width: auto;
+    width: 80%;
+    max-width: 350px;
+    height: auto;
     border-radius: 15px;
 }
 
