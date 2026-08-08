@@ -113,6 +113,7 @@
 }
 
 #servicos_text {
+    padding-top: 20px;
     justify-content: center;
     width: 100%;
     display: flex;
@@ -125,14 +126,14 @@
 
 /* Alinha os cards lado a lado com espaçamento */
 .container-cards {
-    display: grid;
-  grid-template-columns: repeat(2, 1fr); /* Cria exatamente 2 colunas */
-  gap: 24px ;                             /* Espaço entre elas */
+    /*display: grid;
+  grid-template-columns: repeat(2, 1fr);  Cria exatamente 2 colunas 
+  gap: 24px ;                              Espaço entre elas 
   width: 100% ;
-  max-width: 1000px ;                     /* Ajuste a largura como quiser */
-  margin: 0 auto ;                        /* Centraliza o bloco na tela */
-  box-sizing: border-box !important;
-   /* display: flex;
+  max-width: 1000px ;                      Ajuste a largura como quiser 
+  margin: 0 auto ;                        Centraliza o bloco na tela 
+  box-sizing: border-box !important;*/
+    display: flex;
     justify-content: center;
     gap: 30px; 
     padding: 40px 20px;
@@ -140,7 +141,7 @@
     min-width: 300px;     
     align-content: center;
     flex-direction: row;
-    flex-wrap: wrap;*/
+    flex-wrap: wrap;
 }
 
 /* Estilo da caixinha (Card) */
@@ -149,7 +150,7 @@
   border-radius: 20px; /* Bordas arredondadas idênticas às da imagem */
   overflow: hidden; /* Garante que a foto siga o arredondado do card */
   box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.05); /* Sombra bem suave de fundo */
-  max-width: 450px;
+  max-width: 200px;
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -158,7 +159,7 @@
 /* Ajusta a foto para cobrir o topo do card uniformemente */
 .card-foto {
   width: 100%;
-  height: 550px;
+  height: 350px;
   object-fit: cover;
 }
 
@@ -182,6 +183,63 @@
   font-size: 15px;
   color: #666666;
   line-height: 1.6;
+}
+
+#faq_container{
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.faq_item {
+    border-bottom: 1px solid #e0d0cc;
+    padding: 15px 0;
+    
+    border-radius: 60px;
+}
+
+.faq_item summary{
+    
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    font-size: 18px;
+    color: black;
+}
+
+/* Container do sumário */
+summary {
+  display: flex;
+  justify-content: space-between; /* Joga o ícone para a ponta direita */
+  align-items: center;
+  list-style: none;
+  cursor: pointer;
+}
+
+/* Configura o ícone do Font Awesome */
+summary::after {
+  font-family: "Font Awesome 5 Free"; /* Nome exato para a versão 6 */
+  font-weight: 900;                  /* Obrigatório para a versão Solid */
+  content: "\f078";                  /* Chevron para baixo */
+}
+
+/* Muda o ícone quando abrir */
+details[open] summary::after {
+  content: "\f077";                  /* Chevron para cima */
+}
+
+.faq_item[open] summary::after{ 
+    transform: rotate(-90px);
+}
+
+
+
+.faq_item p {
+    margin-top: 10px;
+    padding: 0 5px;
+    color: #665544;
+    line-height: 1.5;
 }
 
 
@@ -211,23 +269,56 @@
         margin-top: 0;
         flex-direction: column; /* Empilha: Texto em cima, Imagem embaixo */
         gap: 20px;              /* Diminui o espaçamento no celular */
-        align-items: flex-start; /* Alinha o conteúdo à esquerda */
+        align-items: center; /* Alinha o conteúdo à esquerda */
     }
 
     #sobre {
-        width: 100%;
+        width: 80%;
     }
 
     .container-cards {
-    display: flex;
+    
+    display:grid;
+    grid-template-columns: repeat(2,1fr);
     justify-content: center;
-    gap: 30px; /* Espaço entre um card e outro */
-    padding: 40px 20px;
-    max-width: 350px;
-    min-width: 300px;     
-    text-align: center;
-    flex-direction: column;
-    flex-wrap: wrap; /* Faz os cards quebrarem de linha automaticamente no celular */
+    gap: 20px;
+    width: 100%;
+    max-width: 500px;
+    flex-direction:row;
+    
+
+    /*gap: 20px; /* Espaço entre um card e outro 
+    text-align: center;*/
+
+
+    
+    }
+
+    .container-card card {
+        flex: 1;
+        width: 180px;
 }
+
+
+
+    .card-foto {
+    width: 100%;
+    height: 200px;
     
 }
+
+    .card {
+        display: flex;
+    flex-direction: column; /* Mantém os itens empilhados de cima para baixo */
+    align-items: center;    /* Centraliza tudo horizontalmente */
+    text-align: center;
+    }
+    .card-conteudo h3{
+    text-align: center;
+    font-size: 15px;
+    align-items: center;
+}
+
+}
+
+    

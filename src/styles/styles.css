@@ -26,14 +26,20 @@ section{
     margin-right: 0;
     box-sizing: border-box;
     background: linear-gradient(to bottom, #C4A49B, #FDF4EF);
+    
 }
 
 #servicos {
+    display: flex;
+    flex-direction: column;
     width: 100vw;
-    margin-left: 0;
-    margin-right: 0;
     box-sizing: border-box;
     background: linear-gradient(to bottom, #FDF4EF, #C4A49B);
+    align-items: center;
+}
+
+#duvidas{
+    background: linear-gradient(to bottom, #C4A49B, #FDF4EF);
 }
 
 .btn-default{
